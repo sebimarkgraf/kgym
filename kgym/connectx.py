@@ -4,7 +4,9 @@ from kaggle_environments import InvalidArgument, make
 
 
 class ConnectX(Env):
-    def __init__(self, switch_prob=0.5, opponent='random', invalid_action=-100):
+    def __init__(self, switch_prob=0.5,
+                 opponent='random',
+                 invalid_action=-100):
         self.env = make('connectx')
 
         if opponent not in self.env.agents:
@@ -16,7 +18,9 @@ class ConnectX(Env):
 
         config = self.env.configuration
         self.action_space = spaces.Discrete(config.columns)
-        self.observation_space = spaces.Box(low=0, high=2, dtype=np.uint8, shape=(config.columns * config.rows,))
+        self.observation_space = spaces.Box(
+            low=0, high=2, dtype=np.uint8,
+            shape=(config.columns * config.rows,))
         self.reward_range = [-1, 1]
 
         if invalid_action < self.reward_range[0]:
@@ -39,8 +43,9 @@ class ConnectX(Env):
 
     def step(self, action):
         if not self.action_space.contains(action):
-            raise ValueError('Action is not in action space of the environment')
-        # Apparently the trainer environment cannot handle non integer action. We therefore cast the action to be an int
+            raise ValueError('Action is not in the action space')
+        # Apparently the trainer environment cannot handle non integer action.
+        # We therefore cast the action to be an int
         obs, reward, done, info = self.trainer.step(int(action))
         if reward is None:
             reward = self.invalid_action
