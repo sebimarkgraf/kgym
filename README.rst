@@ -26,7 +26,17 @@ Implementations for the OpenAI Gym of Kaggle Environments
 Features
 --------
 
-* TODO
+Implementations for the following environments
+
++-------------+------------+------------+
+| Environment | Identifier | Done       |
++=============+============+============+
+| ConnectX    | connectx   | ✔️   ️       |
++-------------+------------+------------+
+| Tic Tac Toe | tictactoe  |            |
++-------------+------------+------------+
+| Identity    | identity   |            |
++-------------+------------+------------+
 
 Credits
 -------

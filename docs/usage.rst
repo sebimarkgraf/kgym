@@ -4,4 +4,5 @@ Usage
 
 To use kgym in a project::
 
-    import kgym
+    from kgym import ConnectX
+
