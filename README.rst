@@ -7,7 +7,7 @@ kgym
         :target: https://pypi.python.org/pypi/kgym
 
 .. image:: https://img.shields.io/travis/sebimarkgraf/kgym.svg
-        :target: https://travis-ci.com/sebimarkgraf/kgym
+        :target: https://travis-ci.org/sebimarkgraf/kgym
 
 .. image:: https://readthedocs.org/projects/kgym/badge/?version=latest
         :target: https://kgym.readthedocs.io/en/latest/?badge=latest
@@ -31,7 +31,7 @@ Implementations for the following environments
 +-------------+------------+------------+
 | Environment | Identifier | Done       |
 +=============+============+============+
-| ConnectX    | connectx   | ✔️   ️       |
+| ConnectX    | connectx   | X          |
 +-------------+------------+------------+
 | Tic Tac Toe | tictactoe  |            |
 +-------------+------------+------------+
