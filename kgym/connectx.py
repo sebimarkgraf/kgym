@@ -12,7 +12,7 @@ class ConnectX(Env):
         if opponent not in self.env.agents:
             raise InvalidArgument(f"Agent must be in {self.env.agents}")
 
-        self.pair = [None, 'negamax']
+        self.pair = [None, opponent]
         self.trainer = self.env.train(self.pair)
         self.switch_prob = switch_prob
 
